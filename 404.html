@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 | ページが見つかりません</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+      color: #1f2937;
+      background: #f8fafc;
+      padding: 24px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 32rem;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 2rem;
+    }
+
+    p {
+      margin: 0 0 20px;
+      line-height: 1.7;
+      color: #4b5563;
+    }
+
+    a {
+      color: #0f62fe;
+      text-decoration: none;
+    }
+
+    .js-only {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>404 Not Found</h1>
+    <p>ページが見つかりません。</p>
+    <p class="js-only"><a id="back-link" href="#">前のページに戻る</a></p>
+    <noscript>
+      <p>前のページがある場合はブラウザの戻るボタンでお戻りください。前のページがない場合は、このタブを閉じてください。</p>
+    </noscript>
+  </main>
+  <script>
+    const backLink = document.getElementById('back-link');
+    backLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      if (history.length > 1) {
+        history.back();
+        return;
+      }
+
+      window.close();
+    });
+    backLink.closest('.js-only').style.display = 'block';
+  </script>
+</body>
+</html>
