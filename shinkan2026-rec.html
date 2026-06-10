@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>リダイレクト中...</title>
+    <script>
+        // 移行先のベースURL
+        const targetBaseUrl = "https://script.google.com/macros/s/AKfycbzL5T3oqjbsfVFwrmLgqcocn7tNGvcVkrzqG8va_kn9E1ok5DW9hPnrqBplEeW_BBE/exec";
+        
+        // 現在のURLのパラメータ（?以降）を取得して結合し、ノータイムでリダイレクト
+        window.location.replace(targetBaseUrl + window.location.search);
+    </script>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- JavaScriptが無効な環境でのみ表示されます -->
+    <noscript>
+        <h2>JavaScriptが無効になっています</h2>
+        <p>自動的にページを移動するためには、お使いのブラウザで<strong>JavaScriptを有効に設定</strong>してください。</p>
+        <p>設定を有効にした後、再度このページを読み込んでください。</p>
+    </noscript>
+</body>
+</html>
